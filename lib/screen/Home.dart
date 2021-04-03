@@ -66,6 +66,15 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           ],
         ),
       ),
+      body: TabBarView(
+        controller: _tabController,
+        children: [
+          Camera(),
+          Chat(),
+          Status(),
+          Calls(),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).accentColor,
         child: Icon(
